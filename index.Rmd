@@ -1,0 +1,16 @@
+--- 
+title: "Programming for Economists"
+subtitle: "Course Manual"
+author: "Misja Mikkers and Florian Sniekers"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+description: "Course manual for Programming for Economists"
+---
+
+
