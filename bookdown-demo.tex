@@ -31,7 +31,11 @@
 \usepackage{natbib}
 \bibliographystyle{apalike}
 \usepackage{longtable,booktabs}
-\usepackage{graphicx,grffile}
+\usepackage{graphicx}
+% grffile has become a legacy package: https://ctan.org/pkg/grffile
+\IfFileExists{grffile.sty}{%
+\usepackage{grffile}
+}{}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -102,15 +106,18 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\chapter{Prerequisites}\label{prerequisites}
+\hypertarget{prerequisites}{%
+\chapter{Prerequisites}\label{prerequisites}}
 
 No prerequisites required
 
 No prerequisites required.
 
-\chapter{Introduction}\label{intro}
+\hypertarget{intro}{%
+\chapter{Introduction}\label{intro}}
 
-\section{Team}\label{team}
+\hypertarget{team}{%
+\section{Team}\label{team}}
 
 In 2018-2019 this course is taught by:
 
@@ -130,14 +137,15 @@ In 2018-2019 this course is taught by:
   Chayanin Wipusanawan.
 \end{itemize}
 
-\section{Datacamp}\label{datacamp}
+\hypertarget{datacamp}{%
+\section{Datacamp}\label{datacamp}}
 
-We are very happy that we partner with datacamp for this course to teach
-you both python and R.
+We are very happy that we partner with datacamp for this course to teach you both python and R.
 
 Datacamp offers great on-line courses for you to learn R and python.
 
-\section{Important}\label{important}
+\hypertarget{important}{%
+\section{Important}\label{important}}
 
 Things to do if you want to follow this course:
 
@@ -150,49 +158,46 @@ Things to do if you want to follow this course:
 \item
   log into the server and click on the green button ``Start My Server''
 \item
-  copy the address from the address field in your browser (you need to
-  paste this in a webform)
+  copy the address from the address field in your browser (you need to paste this in a webform)
 \item
-  after you have done this, go to the webform: -and fill in this
-  webform.
+  after you have done this, go to the webform:
+  -and fill in this webform.
 \item
-  note that you need to fill in the webform before \emph{date tobe
-  added}
+  note that you need to fill in the webform before \emph{date tobe added}
 \end{itemize}
 
-If you do not fill in the webform before the deadline, you cannot get a
-grade for this course. W e use the webform also to plan the tutorials,
-keep an eye on Canvas before your first tutorial.
+If you do not fill in the webform before the deadline, you cannot get a grade for this course.
+W e use the webform also to plan the tutorials, keep an eye on Canvas before your first tutorial.
 
-\section{Questions}\label{questions}
+\hypertarget{questions}{%
+\section{Questions}\label{questions}}
 
 There are no stupid questions, it's stupid not to ask questions.
 
-If you ask us a question by mail, please provide us with the following
-information:
+If you ask us a question by mail, please provide us with the following information:
 
 \begin{itemize}
 \tightlist
 \item
   say whether you are an ECO or EBE student
 \item
-  mention the group number of your tutorial and/or the name of your
-  tutorial teacher
+  mention the group number of your tutorial and/or the name of your tutorial teacher
 \item
   explain your question
 \end{itemize}
 
-\chapter{Schedule}\label{schedule}
+\hypertarget{schedule}{%
+\chapter{Schedule}\label{schedule}}
 
-\section{Before the first lecture}\label{before-the-first-lecture}
+\hypertarget{before-the-first-lecture}{%
+\section{Before the first lecture}\label{before-the-first-lecture}}
 
 \begin{itemize}
 \tightlist
 \item
   go to the russet server and log in
 \item
-  create a new notebook by clicking on ``New'' in the (almost) top right
-  corner
+  create a new notebook by clicking on ``New'' in the (almost) top right corner
 \item
   choose ``Python 3''
 \item
@@ -206,28 +211,23 @@ git clone \url{https://gitlab.uvt.nl/janboone/release.git}
 \begin{itemize}
 \tightlist
 \item
-  and press the keys ``SHIFT'' and ``ENTER'' at the same time (``ENTER''
-  is sometimes called ``RETURN'')
+  and press the keys ``SHIFT'' and ``ENTER'' at the same time (``ENTER'' is sometimes called ``RETURN'')
 \item
   the text appears ``Cloning into `release'.''
 \item
-  this adds a new folder called ``release''; to see this go to ``File''
-  -\textgreater{} ``Close and Halt''
+  this adds a new folder called ``release''; to see this go to ``File'' -\textgreater{} ``Close and Halt''
 \item
-  if you click on the folder ``release'', you see that there are three
-  sub-folders called ``week1'', ``week2'', ``week3''
+  if you click on the folder ``release'', you see that there are three sub-folders called ``week1'', ``week2'', ``week3''
 \item
-  each folder has two notebooks, one called ``assignment'' the other
-  ``class''
+  each folder has two notebooks, one called ``assignment'' the other ``class''
 \item
-  the assignment notebook you make before class and we go (quickly) over
-  it in class
+  the assignment notebook you make before class and we go (quickly) over it in class
 \item
-  the class notebook we do together in class and there will be plenty of
-  time for you to answer questions.
+  the class notebook we do together in class and there will be plenty of time for you to answer questions.
 \end{itemize}
 
-\section{Schedule}\label{schedule-1}
+\hypertarget{schedule-1}{%
+\section{Schedule}\label{schedule-1}}
 
 The schedule for the course is as follows:
 
@@ -237,8 +237,7 @@ week & Datacamp & preparation & in class\tabularnewline
 \midrule
 \endhead
 python & & &\tabularnewline
-27/1 & Intro to python & bring your laptop to the lecture & Introduction
-Lecture\tabularnewline
+27/1 & Intro to python & bring your laptop to the lecture & Introduction Lecture\tabularnewline
 3/2 & & assignment1.ipynb & class1.ipynb\tabularnewline
 10/2 & Intermediate python & &\tabularnewline
 17 /2 & & assignment2.ipynb & class2.ipynb\tabularnewline
@@ -247,102 +246,47 @@ Lecture\tabularnewline
 23/3 & midterm python & &\tabularnewline
 R & & &\tabularnewline
 30/3 & Intro to R & &\tabularnewline
-6/4 & & assignment4.ipynb & class4a.ipynb and
-class4b.ipynb\tabularnewline
+6/4 & & assignment4.ipynb & class4a.ipynb and class4b.ipynb\tabularnewline
 13/4 & Intro to tidyverse & &\tabularnewline
-20/4 & & assignment5.ipynb & class5a.ipynb and
-class5b.ipynb\tabularnewline
-4/5 & & assignment6.ipynb & class6a.ipynb and
-class6b.ipynb\tabularnewline
+20/4 & & assignment5.ipynb & class5a.ipynb and class5b.ipynb\tabularnewline
+4/5 & & assignment6.ipynb & class6a.ipynb and class6b.ipynb\tabularnewline
 18/5 & reserve & &\tabularnewline
 TBA & exam R & &\tabularnewline
 TBA & resit python and R & &\tabularnewline
 \bottomrule
 \end{longtable}
 
-Note that the exam dates are not currently planned. Also at this moment
-the exam times are not known.
+Note that the exam dates are not currently planned. Also at this moment the exam times are not known.
 
-For the first lecture it is useful to bring your laptop if you have one.
-We will show you how to start the server and evaluate python in a
-jupyter notebook.
+For the first lecture it is useful to bring your laptop if you have one. We will show you how to start the server and evaluate python in a jupyter notebook.
 
-Also in the week of the first lecture, do the Datacamp course with the
-introduction to python.
+Also in the week of the first lecture, do the Datacamp course with the introduction to python.
 
-After the lecture, we have alternating weeks of classes and Datacamp.
-Before you come to class, you do the assignment notebook at home. In
-class we will do the class notebook together. The idea of this is that
-you can practice python while we are around to quickly answer your
-questions, help you with errors etc.
+After the lecture, we have alternating weeks of classes and Datacamp. Before you come to class, you do the assignment notebook at home. In class we will do the class notebook together. The idea of this is that you can practice python while we are around to quickly answer your questions, help you with errors etc.
 
-Make sure that you have your notebooks complete before the exam. We will
-not publish solutions to the notebooks. But if you have your completed
-notebooks on the russet server, you are allowed to use copy/paste at the
-exam.
+Make sure that you have your notebooks complete before the exam. We will not publish solutions to the notebooks. But if you have your completed notebooks on the russet server, you are allowed to use copy/paste at the exam.
 
-In the week without a class, you do the Datacamp lecture at home. With
-Datacamp you learn the python syntax (what code to type). In class we
-teach you how to use python to solve economic problems.
+In the week without a class, you do the Datacamp lecture at home. With Datacamp you learn the python syntax (what code to type). In class we teach you how to use python to solve economic problems.
 
-\section{Teaching philosophy}\label{teaching-philosophy}
+\hypertarget{teaching-philosophy}{%
+\section{Teaching philosophy}\label{teaching-philosophy}}
 
-We teach python/R in a way that may seem counter-intuitive to you at
-first sight. Our starting point is that you are not doing an
-engineering/IT degree; you are an economist. Hence, we are interested in
-economic applications; not so much in the details of the python/R
-language.
+We teach python/R in a way that may seem counter-intuitive to you at first sight. Our starting point is that you are not doing an engineering/IT degree; you are an economist. Hence, we are interested in economic applications; not so much in the details of the python/R language.
 
-Of course, you need to learn the basics of the language, things like
-data-types, control structures etc. In other words, you need to know
-what a list is, a dictionary, a numpy array, a pandas dataframe, how to
-define functions, use list comprehension, if-then-else structures etc.
+Of course, you need to learn the basics of the language, things like data-types, control structures etc. In other words, you need to know what a list is, a dictionary, a numpy array, a pandas dataframe, how to define functions, use list comprehension, if-then-else structures etc.
 
-This ``technical'' part you mainly learn via Datacamp. There they teach
-you the details of the language such that you get the syntax right. By
-doing their exercises you learn to type python, recognize error messages
-(when you make mistakes).
+This ``technical'' part you mainly learn via Datacamp. There they teach you the details of the language such that you get the syntax right. By doing their exercises you learn to type python, recognize error messages (when you make mistakes).
 
-In class we then focus on applying these tools to economic problems. In
-class we also type python and we also make mistakes which generate
-errors. So there is an overlap with the Datacamp lectures, but the focus
-in class is different. Further, in economics we are interested in
-optimization (we tend to maximize profits, utility etc.) and solving
-equations (specifically, solving for fixed points which give us
-equilibria). For this we use numpy and scipy, which is not covered much
-at the Datacamp courses that we do.
+In class we then focus on applying these tools to economic problems. In class we also type python and we also make mistakes which generate errors. So there is an overlap with the Datacamp lectures, but the focus in class is different. Further, in economics we are interested in optimization (we tend to maximize profits, utility etc.) and solving equations (specifically, solving for fixed points which give us equilibria). For this we use numpy and scipy, which is not covered much at the Datacamp courses that we do.
 
-Many concepts you will first see at Datacamp and then we apply them in
-class. Sometimes it will be the other way around: we used something in
-class and you learn more details about it at Datacamp. This is perfectly
-fine. However, it is important that you keep up-to-date with Datacamp
-otherwise you are going to get lost. Also programming is something that
-you need to practice. You can do the same the Datacamp two or three
-times. Also the notebooks that we do in class, you can play around with
-these. Plot different functions, solve equations for different parameter
-values etc. Just looking at the answers that we give you in class will
-not help you to learn to use python/R.
+Many concepts you will first see at Datacamp and then we apply them in class. Sometimes it will be the other way around: we used something in class and you learn more details about it at Datacamp. This is perfectly fine. However, it is important that you keep up-to-date with Datacamp otherwise you are going to get lost. Also programming is something that you need to practice. You can do the same the Datacamp two or three times. Also the notebooks that we do in class, you can play around with these. Plot different functions, solve equations for different parameter values etc. Just looking at the answers that we give you in class will not help you to learn to use python/R.
 
-Finally, we urge you to use google (or other search engines like
-DuckDuckGo) and stackoverflow with your assignments. Some students find
-this weird at the beginning: should we not teach you everything that you
-need to know? The answer is no for a number of reasons. First, even
-professional programmers use google and stackoverflow all the time. If
-you are on Quora; see this post and this one. Second, python and R are
-open source and lots of people work with it. If you encounter a problem,
-chances are that someone else had the same problem and knows the
-solution to it. There is not need to ``invent the wheel''. Use the
-resources available to you. If you copy a lot of code, you should add a
-reference. Finally, because python and R are open source, they develop
-rapidly. The things that we teach you now, will be obsolete in a couple
-of years time. Hence, you need to be able to find your way around also
-in 10 years time. To start practicing this, use google now.
+Finally, we urge you to use google (or other search engines like DuckDuckGo) and stackoverflow with your assignments. Some students find this weird at the beginning: should we not teach you everything that you need to know? The answer is no for a number of reasons. First, even professional programmers use google and stackoverflow all the time. If you are on Quora; see this post and this one. Second, python and R are open source and lots of people work with it. If you encounter a problem, chances are that someone else had the same problem and knows the solution to it. There is not need to ``invent the wheel''. Use the resources available to you. If you copy a lot of code, you should add a reference. Finally, because python and R are open source, they develop rapidly. The things that we teach you now, will be obsolete in a couple of years time. Hence, you need to be able to find your way around also in 10 years time. To start practicing this, use google now.
 
-The only warning here is: at the exam you will not have access to the
-whole internet. So, also make sure that you can find help in the jupyter
-notebook. We will practice this in class.
+The only warning here is: at the exam you will not have access to the whole internet. So, also make sure that you can find help in the jupyter notebook. We will practice this in class.
 
-\chapter{Important}\label{important-1}
+\hypertarget{important-1}{%
+\chapter{Important}\label{important-1}}
 
 \emph{Things to do if you want to follow this course:}
 
@@ -355,30 +299,29 @@ notebook. We will practice this in class.
 \item
   log into the server and click on the green button ``Start My Server''
 \item
-  copy the address from the address field in your browser (you need to
-  paste this in a webform)
+  copy the address from the address field in your browser (you need to paste this in a webform)
 \item
   after you have done this, go to the webform:
 \item
   and fill in this webform.
 \item
-  note that you need to fill in the webform before \emph{date to be
-  added}
+  note that you need to fill in the webform before \emph{January 31}
 \item
-  if you do not fill in the webform before the deadline, you cannot get
-  a grade for this course
+  if you do not fill in the webform before the deadline, you cannot get a grade for this course
 \item
-  we use the webform also to plan the tutorials, keep an eye on Canvas
-  before your first tutorial
+  we use the webform also to plan the tutorials, keep an eye on Canvas before your first tutorial
 \end{itemize}
 
-\chapter{Information first Lecture}\label{information-first-lecture}
+\hypertarget{information-first-lecture}{%
+\chapter{Information first Lecture}\label{information-first-lecture}}
 
-\section{Introduction Programming}\label{introduction-programming}
+\hypertarget{introduction-programming}{%
+\section{Introduction Programming}\label{introduction-programming}}
 
 Misja Mikkers \& Florian Sniekers
 
-\section{Table of Contents}\label{table-of-contents}
+\hypertarget{table-of-contents}{%
+\section{Table of Contents}\label{table-of-contents}}
 
 \begin{itemize}
 \item
@@ -389,7 +332,8 @@ Misja Mikkers \& Florian Sniekers
   Second part of lecture
 \end{itemize}
 
-\section{Introduction}\label{introduction}
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
 
 \begin{itemize}
 \tightlist
@@ -398,8 +342,7 @@ Misja Mikkers \& Florian Sniekers
 \item
   this is a programming course
 \item
-  we know that many of you are not too keen on computers (beyond MS
-  Office)
+  we know that many of you are not too keen on computers (beyond MS Office)
 \item
   this will be a gentle introduction to open source software
 \item
@@ -415,22 +358,24 @@ Misja Mikkers \& Florian Sniekers
 \item
   to be able to use open source (``free'') software
 \item
-  to solve problems together with readable documentation on how you
-  solved it (``reproducible research'')
+  to solve problems together with readable documentation on how you solved it (``reproducible research'')
 \item
   on this last point, office products like excel score rather badly
 \item
   you will use R and python in courses in the years to come
 \end{itemize}
 
-\subsection{Who teaches this course?}\label{who-teaches-this-course}
+\hypertarget{who-teaches-this-course}{%
+\subsection{Who teaches this course?}\label{who-teaches-this-course}}
 
 In 2019-2020 this course is taught by:
 
-Misja Mikkers Florian Sniekers \emph{add TA's}
+Misja Mikkers
+Florian Sniekers
+\emph{add TA's}
 
-\subsection{How do we teach this
-course?}\label{how-do-we-teach-this-course}
+\hypertarget{how-do-we-teach-this-course}{%
+\subsection{How do we teach this course?}\label{how-do-we-teach-this-course}}
 
 \begin{itemize}
 \tightlist
@@ -439,8 +384,7 @@ course?}\label{how-do-we-teach-this-course}
 \item
   tutorials: with plenty of time to ask questions
 \item
-  there are a number of ``regular'' tutorials and one in the computer
-  lab
+  there are a number of ``regular'' tutorials and one in the computer lab
 \item
   if you do not have a laptop, attend the tutorial in the computer lab
 \item
@@ -456,30 +400,34 @@ course?}\label{how-do-we-teach-this-course}
 \item
   assignment notebooks to be made before the class
 \item
-  class notebooks that we do together in class (to allow you to ask
-  questions)
+  class notebooks that we do together in class (to allow you to ask questions)
 \end{itemize}
 
-\subsection{Information about the
-course}\label{information-about-the-course}
+\hypertarget{information-about-the-course}{%
+\subsection{Information about the course}\label{information-about-the-course}}
 
 \begin{itemize}
 \item
   all information about the course can be found on this website
 \item
-  pay attention to: -the schedule: explaining when you need to do what
-  -the rules for the exam explaining how the exam works and a practice
-  exam
+  pay attention to:
+  -the schedule: explaining when you need to do what
+  -the rules for the exam explaining how the exam works and a practice exam
 \item
-  Your grade -There are two separate ways to earn your grade
+  Your grade
+  -There are two separate ways to earn your grade
 \item
-  regular route: -midterm on python -end of semester exam on R
+  regular route:
+  -midterm on python
+  -end of semester exam on R
 \item
-  resit -exam on python and R combined -you cannot use grades from one
-  route for the other one.
+  resit
+  -exam on python and R combined
+  -you cannot use grades from one route for the other one.
 \end{itemize}
 
-\subsection{Exam}\label{exam}
+\hypertarget{exam}{%
+\subsection{Exam}\label{exam}}
 
 \begin{itemize}
 \tightlist
@@ -490,18 +438,17 @@ course}\label{information-about-the-course}
 \item
   do not open your exam file after you have finished
 \item
-  if you do, your exam will not be graded (even if you did not change
-  anything)
+  if you do, your exam will not be graded (even if you did not change anything)
 \item
-  at the exam you can freely copy and paste from the assignments we did
-  in class
+  at the exam you can freely copy and paste from the assignments we did in class
 \item
   we will not post answers to the assignments
 \item
   make sure you attend the tutorials and pay attention in class!
 \end{itemize}
 
-\subsection{Datacamp}\label{datacamp-1}
+\hypertarget{datacamp-1}{%
+\subsection{Datacamp}\label{datacamp-1}}
 
 \begin{itemize}
 \tightlist
@@ -512,11 +459,11 @@ course}\label{information-about-the-course}
 \item
   note the deadline for filling in the webform!
 \item
-  if you miss the deadline, you will have to pay for premium content on
-  Datacamp yourself
+  if you miss the deadline, you will have to pay for premium content on Datacamp yourself
 \end{itemize}
 
-\subsection{markdown}\label{markdown}
+\hypertarget{markdown}{%
+\subsection{markdown}\label{markdown}}
 
 \begin{itemize}
 \item
@@ -524,11 +471,13 @@ course}\label{information-about-the-course}
 \item
   markdown allows you to create structure in a simple way
 \item
-  examples are: \texttt{\#\ this\ is\ a\ heading}
+  examples are:
+  \texttt{\#\ this\ is\ a\ heading}
 
   \texttt{\#\#\ subheading}
 
-  \texttt{*\ first\ bullet} \texttt{*\ second\ bullet}
+  \texttt{*\ first\ bullet}
+  \texttt{*\ second\ bullet}
 
   \texttt{{[}link\ text{]}(actual\ link,\ e.g.\ http://www.etc)}
 
@@ -538,8 +487,9 @@ course}\label{information-about-the-course}
 \item
   equations you can type in latex
 \item
-  latex is great word processing software for now, we only need it to
-  write math you can guess what the following will do:
+  latex is great word processing software
+  for now, we only need it to write math
+  you can guess what the following will do:
 \end{itemize}
 
 \texttt{\$x\^{}2\$,\ \$\textbackslash{}beta\$,\ \$\textbackslash{}sqrt\{9\}\$,\ \$\textbackslash{}frac\{1\}\{2\}\$,\ \$\textbackslash{}bar\ x\$}
@@ -553,13 +503,13 @@ course}\label{information-about-the-course}
 \begin{itemize}
 \tightlist
 \item
-  if you need something, just google; e.g. ``google latex phi'' or
-  ``google latex empty set'' etc.
+  if you need something, just google; e.g.~``google latex phi'' or ``google latex empty set'' etc.
 \item
   and try it out in the jupyter notebook
 \end{itemize}
 
-\section{Second part of lecture}\label{second-part-of-lecture}
+\hypertarget{second-part-of-lecture}{%
+\section{Second part of lecture}\label{second-part-of-lecture}}
 
 \begin{itemize}
 \item
@@ -567,8 +517,7 @@ course}\label{information-about-the-course}
 \item
   link to the server address to copy/paste in the google form
 \item
-  importing the python material (this is also the way you will import
-  your exam)
+  importing the python material (this is also the way you will import your exam)
 \item
   evaluating cells
 \item
@@ -581,13 +530,16 @@ course}\label{information-about-the-course}
   type some latex
 \end{itemize}
 
-\subsection{before you leave}\label{before-you-leave}
+\hypertarget{before-you-leave}{%
+\subsection{before you leave}\label{before-you-leave}}
 
 do the steps under the chapter Important
 
-\chapter{Exam}\label{exam-1}
+\hypertarget{exam-1}{%
+\chapter{Exam}\label{exam-1}}
 
-\section{Grade}\label{grade}
+\hypertarget{grade}{%
+\section{Grade}\label{grade}}
 
 Your grade is either determined by:
 
@@ -603,21 +555,16 @@ or by
 
 the resit which is based on both python and R (100\%)
 
-Each exam lasts 3 hours. You cannot combine the resit with the midterm
-etc.
+Each exam lasts 3 hours. You cannot combine the resit with the midterm etc.
 
-\section{Useful to know}\label{useful-to-know}
+\hypertarget{useful-to-know}{%
+\section{Useful to know}\label{useful-to-know}}
 
-The questions that we ask in the exam are based on the notebooks that we
-discuss in class. Hence make sure that you have these ready before the
-exam. You are allowed to use copy-paste out of these notebooks.
+The questions that we ask in the exam are based on the notebooks that we discuss in class. Hence make sure that you have these ready before the exam. You are allowed to use copy-paste out of these notebooks.
 
-During the semester, you can use google to find information on
-functions, error messages etc. However, during the exam you can only
-access a limited number of pages.
+During the semester, you can use google to find information on functions, error messages etc. However, during the exam you can only access a limited number of pages.
 
-In particular, during the exam you work in a special exam environment on
-TiU computers. We have asked IT to whitelist the following websites:
+In particular, during the exam you work in a special exam environment on TiU computers. We have asked IT to whitelist the following websites:
 
 \begin{itemize}
 \tightlist
@@ -653,13 +600,13 @@ TiU computers. We have asked IT to whitelist the following websites:
   \href{https://www.rdocumentation.org/}{rdocumentation}
 \end{itemize}
 
-\section{Exam procedure}\label{exam-procedure}
+\hypertarget{exam-procedure}{%
+\section{Exam procedure}\label{exam-procedure}}
 
 \begin{itemize}
 \tightlist
 \item
-  we will post the exam both on gitlab. You will get instructions how to
-  get the exam on the Russet server.r
+  we will post the exam both on gitlab. You will get instructions how to get the exam on the Russet server.r
 \item
   finishing your exam
 
@@ -668,15 +615,11 @@ TiU computers. We have asked IT to whitelist the following websites:
   \item
     make sure that we can easily see which notebook is your exam
   \item
-    that is, do not rename the exam notebook (so that we do not know
-    which notebook it is)
+    that is, do not rename the exam notebook (so that we do not know which notebook it is)
   \item
-    do not have 5 different versions of the exam notebook; we will then
-    choose one at random and grade this one
+    do not have 5 different versions of the exam notebook; we will then choose one at random and grade this one
   \item
-    after you finish the exam, do not re-open the notebook again: we can
-    see the last time the notebook was opened. If this is after you left
-    the exam room, we can see this and will nullify your exam.
+    after you finish the exam, do not re-open the notebook again: we can see the last time the notebook was opened. If this is after you left the exam room, we can see this and will nullify your exam.
   \end{itemize}
 \end{itemize}
 
